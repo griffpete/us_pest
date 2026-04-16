@@ -41,11 +41,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
-          <div className="text-2xl font-bold flex items-center gap-1.5">
-            <span className="text-red-500">US</span>
-            <span className={`text-lg ${transparent ? 'text-white' : 'text-gray-800'}`}>★</span>
-            <span className="text-blue-600">Pest</span>
-          </div>
+          <img src="/USPest.png" alt="US Pest" className="h-12 w-auto" />
         </NavLink>
 
         {/* Desktop Nav */}

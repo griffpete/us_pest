@@ -1,29 +1,6 @@
 import { Phone, MapPin, Clock, Send } from 'lucide-react';
-import { useState } from 'react';
 
 export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    setTimeout(() => setSubmitted(false), 5000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <>
       {/* Page Header */}
@@ -85,7 +62,7 @@ export function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-red-500 text-white p-6 rounded-2xl">
+              <div className="bg-blue-500 text-white p-6 rounded-2xl">
                 <h4 className="text-xl font-bold mb-2">Same-Day Service Available</h4>
                 <p className="text-red-100">
                   Need urgent pest control? Call us now for same-day service availability in the St. George area.
@@ -93,111 +70,152 @@ export function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Contact Form - Zoho */}
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Free Quote</h3>
+              <form
+                id="webform7371341000000737942"
+                action="https://crm.zoho.com/crm/WebToLeadForm"
+                name="WebToLeads7371341000000737942"
+                method="POST"
+                onSubmit="javascript:document.charset='UTF-8'; return checkMandatory7371341000000737942()"
+                acceptCharset="UTF-8"
+              >
+                <input type="text" style={{ display: 'none' }} name="xnQsjsdp" value="b8d40eefa3e4794a3b37df95243d73a5d7e74a283f80b7f033f96bbcf953d2ae" />
+                <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+                <input type="text" style={{ display: 'none' }} name="xmIwtLD" value="a7bfbb1eb2e9bf9ea37b4572e343c25269b62e1d05b48024035ae6bda57a0ae2794f5bf8c1dbe4594886c064ec9544e4" />
+                <input type="text" style={{ display: 'none' }} name="actionType" value="TGVhZHM=" />
+                <input type="text" style={{ display: 'none' }} name="aG9uZXlwb3Q" value="" />
 
-              {submitted && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl">
-                  ✅ Thank you! We'll be in touch with you shortly.
-                </div>
-              )}
+                <div className="space-y-4">
+                  <div>
+                    <label htmlFor="First_Name" className="block text-sm font-medium text-gray-700 mb-2">
+                      First Name <span style={{ color: 'red' }}>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="First_Name"
+                      aria-required="true"
+                      aria-label="First Name"
+                      name="First Name"
+                      maxLength={40}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      placeholder="John"
+                    />
+                  </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                    placeholder="John Smith"
-                  />
-                </div>
+                  <div>
+                    <label htmlFor="Last_Name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name <span style={{ color: 'red' }}>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="Last_Name"
+                      aria-required="true"
+                      aria-label="Last Name"
+                      name="Last Name"
+                      maxLength={80}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      placeholder="Smith"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                    placeholder="john@example.com"
-                  />
-                </div>
+                  <div>
+                    <label htmlFor="Email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="text"
+                      ftype="email"
+                      autocomplete="false"
+                      id="Email"
+                      aria-required="false"
+                      aria-label="Email"
+                      name="Email"
+                      maxLength={100}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      placeholder="john@example.com"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                    placeholder="(435) 555-0123"
-                  />
-                </div>
+                  <div>
+                    <label htmlFor="Phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone <span style={{ color: 'red' }}>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="Phone"
+                      aria-required="true"
+                      aria-label="Phone"
+                      name="Phone"
+                      maxLength={30}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                      placeholder="(435) 555-0123"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Service Needed
+                    </label>
+                    <input type="hidden" name="Designation" value="" />
+                    <div className="space-y-2">
+                      {['General Pest Control', 'Termite Prevention', 'Dust Fumigation', 'Grub Control', 'Fungus Control'].map((service) => (
+                        <label key={service} className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            name="Designation"
+                            value={service}
+                            className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
+                          />
+                          <span className="text-gray-700">{service}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    id="formsubmit"
+                    className="w-full flex items-center justify-center gap-2 bg-red-500 text-white px-6 py-4 rounded-lg hover:bg-red-600 transition-colors font-medium text-lg"
                   >
-                    <option value="">Select a service</option>
-                    <option value="residential">Residential Service</option>
-                    <option value="commercial">Commercial Service</option>
-                    <option value="inspection">General Inspection</option>
-                    <option value="termite-prevention">Termite Prevention</option>
-                    <option value="termite-inspection">Termite Inspection</option>
-                    <option value="fumigation">Dust Fumigation</option>
-                    <option value="grub">Grub Control</option>
-                    <option value="fungus">Fungus Control</option>
-                  </select>
+                    <Send className="w-5 h-5" />
+                    Submit
+                  </button>
                 </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"
-                    placeholder="Tell us about your pest control needs..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-red-500 text-white px-6 py-4 rounded-lg hover:bg-red-600 transition-colors font-medium text-lg"
-                >
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </button>
               </form>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    function checkMandatory7371341000000737942() {
+                      var form = document.forms['WebToLeads7371341000000737942'];
+                      var mndFileds = new Array('First Name', 'Last Name', 'Phone');
+                      var fldLangVal = new Array('First Name', 'Last Name', 'Phone');
+                      for (var i = 0; i < mndFileds.length; i++) {
+                        var fieldObj = form[mndFileds[i]];
+                        if (fieldObj) {
+                          if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                            alert(fldLangVal[i] + ' cannot be empty.');
+                            fieldObj.focus();
+                            return false;
+                          }
+                        }
+                      }
+                      var checkedServices = [];
+                      var checkboxes = form.querySelectorAll('input[name="Designation"]:checked');
+                      for (var j = 0; j < checkboxes.length; j++) {
+                        checkedServices.push(checkboxes[j].value);
+                      }
+                      var hiddenInput = form.querySelector('input[name="Designation"]');
+                      if (hiddenInput) {
+                        hiddenInput.value = checkedServices.join(', ');
+                      }
+                      document.getElementById('formsubmit').disabled = true;
+                      return true;
+                    }
+                  `,
+                }}
+              />
             </div>
           </div>
         </div>
