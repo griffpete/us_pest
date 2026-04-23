@@ -49,8 +49,8 @@ export function Home() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Protect Your Home,{' '}
-              <span className="text-red-400">Naturally</span>
+              Local Experts. Proven Results.{' '}
+              <span className="text-red-400">Zero Pests.</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
@@ -116,7 +116,7 @@ export function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 'Licensed and insured professionals',
-                'Eco-friendly treatment options available',
+                'Dog-friendly treatment options available',
                 'Transparent pricing with no hidden fees',
                 'Satisfaction guaranteed on all services',
                 'Latest pest control technology and methods',

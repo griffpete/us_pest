@@ -17,11 +17,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-flex">
-              <div className="text-3xl font-bold mb-4 flex items-center gap-2">
-                <span className="text-red-500">US</span>
-                <span className="text-white text-2xl">★</span>
-                <span className="text-blue-400">Pest</span>
-              </div>
+              <img src="/USPest.png" alt="US Pest" className="h-16 w-auto mb-4" />
             </Link>
             <p className="text-gray-400 mb-4 max-w-md">
               Family-owned pest control serving St. George, Utah for over 26 years. Professional service without long-term contracts.

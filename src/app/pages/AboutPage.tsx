@@ -7,7 +7,7 @@ export function AboutPage() {
 
   const stats = [
     { icon: Award, label: 'Years of Experience', value: '26+' },
-    { icon: Users, label: 'Happy Customers', value: '5000+' },
+    { icon: Users, label: 'Happy Customers', value: '500+' },
     { icon: Heart, label: 'Family Owned', value: '100%' },
     { icon: TrendingUp, label: 'Success Rate', value: '99%' },
   ];
