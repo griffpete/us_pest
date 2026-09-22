@@ -36,8 +36,8 @@ export function AboutPage() {
               <div className="absolute -top-6 -left-6 w-48 h-48 bg-blue-200/40 rounded-3xl -z-10" />
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-red-500/10 rounded-3xl -z-10" />
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1513807016779-d51c0c026263?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMGhvbWV8ZW58MXx8fHwxNzczODgwNjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Happy family"
+                src="/eve.JPG"
+                alt="US Pest technician removing webs from an entryway"
                 className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
               />
             </div>

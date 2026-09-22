@@ -41,7 +41,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
-          <img src="/USPest.png" alt="US Pest" className="h-12 w-auto" />
+          <img src="/USPest.png" alt="US Pest" className="h-9 md:h-12 w-auto" />
         </NavLink>
 
         {/* Desktop Nav */}

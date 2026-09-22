@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function Hero() {
@@ -14,20 +14,16 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1768765397301-8a64df3d41ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3VzZSUyMGV4dGVyaW9yJTIwY2xlYW58ZW58MXx8fHwxNzczODg0NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Modern home"
+          src="/truck.JPG"
+          alt="US Pest service truck"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-blue-900/70 to-gray-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/45 via-blue-900/35 to-gray-900/40" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 pb-24 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-blue-600/20 backdrop-blur-sm border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full mb-6">
-            <Shield className="w-4 h-4" />
-            <span className="text-sm">26 Years of Trusted Service</span>
-          </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Protect Your Home,{' '}
@@ -53,13 +49,6 @@ export function Hero() {
               Call: 435-628-4581
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-white/60 rounded-full animate-bounce" />
         </div>
       </div>
     </section>
